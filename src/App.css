@@ -1,38 +1,395 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-mobile {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #000;
+  font-family: 'Allura', cursive;
   color: white;
+  font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  font-size: 62.5%;
+}
+button {
+  border-radius: 50%;
+  border: none;
+
+}
+.About-nav {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0rem 0rem 0rem 5rem;
+}
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin: 2rem 0rem 0rem 4rem;
+  border-radius: 50%;
+}
+.logo > img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+.tagline {
+  font-size: 3.5rem;
+  margin: 2.5rem;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+.landing-page-photo {
+  flex-grow: 1;
+}
+.landing-page-girl {
+  width: 30rem;
+  height: 80vh;
+
+}
+.header {
+  flex-grow: 3;
+}
+.header-main {
+  font-size: 6rem;
+  color: whitesmoke;
+  position: relative;
+  font-size: 5rem;
+}
+.header-first {
+  position: absolute;
+  left: 0rem;
+  top: -5rem;
+}
+.header-last {
+  position: absolute;
+  left: 18rem;
+  font-size: 5rem;
+}
+.header-secondary{
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  align-self: flex-end;
+}
+.search {
+  font-size: 1.6rem;
+  background: none;
+  border-radius: 200px;
+  height: 3rem;
+  width: 24rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .75s ease-in-out;
+  transition: all .75s ease-in-out;
+}
+
+.search__text {
+  border: 0;
+  background: transparent;
+  outline: 0;
+  color: white;
+  float: left;
+  line-height: 2.5rem;
+  width: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  font-size: 1.9rem;
+  font-family: 'Dancing Script', cursive;
+  text-transform: capitalize;
+}
+
+.search__button {
+  color: black;
+  background: salmon;
+  border-radius: 50%;
+  float: right;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.search:hover {
+  background: #1e1e1e;
+}
+
+.search:hover > .search__text {
+  width: inherit;
+  margin-left: 1rem;
+}
+.search:hover > .search__button {
+  transform: scale(1.1)
+}
+
+.popular-artists {
+  font-size: 3.5rem;
+  margin-left: 10rem;
+  display: flex;
+  max-width: 70%;
+  width: 100rem;
+  position: relative;
+  cursor: pointer;
+
+}
+.popular-artists-text {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #BC3A80,#4682D3);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.popular-artists::after {
+  position: absolute;
+  bottom: 0px;
+  width: 70%;
+  height: 1rem;
+  background-color: white;
+}
+.popular-artists:hover > #list {
+  opacity: 1;
+  visibility: visible;
+}
+.popular-artists:hover > .plus {
+  transform: rotate(40deg);
+}
+
+.explanation {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: .2rem;
+  transition: all ease-in;
+  transition-duration: .75s;
+  transition-delay: .2s;
+}
+
+.popular-artists-list {
+  position: relative;
+}
+
+#list {
+  font-family: 'Benne', serif;
+  list-style: none;
+  position: absolute;
+  top: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in;
+  transition-duration: .75s;
+  transition-delay: .2s;
+  display: block;
+  font-size: 2rem;
+  align-self: flex-start;
+
+}
+.list-name {
+  letter-spacing: .2rem;
+ font-family: 'Open Sans', sans-serif;
+}
+.list-title {
+  margin-left: 7rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.plus {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: transparent;
+  color: white;
+  position: absolute;
+  right: -3rem;
+  transition: all ease-in;
+  transition-delay: .2s;
+  transition-duration: .5s;
+  margin-top: .2rem;
+}
+
+
+/* Full Screen Mode */
+@media screen and (min-width: 1300px){
+  .About-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right:0;
+    height: 100vh;
+    width: 20vw;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    z-index: 1000;
   }
-  to {
-    transform: rotate(360deg);
+  .scroll {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
+  .About {
+    font-size: 4rem;
+    padding: 2.5rem;
+    margin-left: 2.5rem;
+  }
+  .About-app {
+    padding: 2rem;
+    padding-left: 0;
+    font-size: 2.5rem;
+  }
+  .About-creator {
+    padding: 2rem;
+    font-size: 2.5rem;
+    padding-left: 0;
+  }
+
+  .scroll > p {
+    font-family: 'Benne', serif;
+    padding: 2.5rem;
+
+  }
+  .search {
+    position: absolute;
+    right: 20vw;
+  }
+
+}
+
+/* For Tablets */
+
+@media screen and (max-width: 1030px){
+  html {
+    font-size: 55%;
+  }
+  .search__text {
+      border: 0;
+      background: transparent;
+      outline: 0;
+      color: white;
+      float: left;
+      line-height: 2.5rem;
+      width: 24rem;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      font-size: 1.9rem;
+      font-family: 'Dancing Script', cursive;
+      text-transform: capitalize;
+      background-color: #1e1e1e;
+  }
+  #list {
+    visibility: visible;
+    opacity: 1;
+  }
+  .plus {
+    transform: rotate(40deg);
+  }
+  .popular-artists-text:hover > .explanation::after {
+      content: ' Tap + to open the list'
+  }
+  .popular-artists-text:hover ~ #list {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .popular-artists-text:hover ~ .plus {
+      transform: rotate(0);
+    }
+    
+  header {
+    display: none;
+  }
+  .header-mobile {
+    position: relative;
+    display: block;
+    padding: 3rem;
+    margin: 10rem;
+    height: 70vh;
+    width: 95%;
+    background-size: cover;
+    background-position: top;
+    background-image: url('./img/landing-page-girl.png');
+  }
+  .header-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+}
+
+/* Mobile and Tablet Mode */
+
+@media screen and (min-height: 760px) {
+  .landing-page-girl {
+    height: 50vh;
+  }
+}
+
+/* Mobile Mode */
+
+
+@media screen and (max-width: 800px){
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width: 1030px) {
+  header {
+    display: none;
+  }
+  .header-mobile {
+    position: relative;
+    display: block;
+    left: -15rem;
+    height: 70vh;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./img/landing-page-girl.png');
+  }
+  .header-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+  .search {
+    transform: scale(1.1);
+  }
+
 }
