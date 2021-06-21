@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/meherdeepak-2005.github.io/static/css/main.7ff01659.chunk.css",
+    "main.js": "/meherdeepak-2005.github.io/static/js/main.25a1c763.chunk.js",
+    "main.js.map": "/meherdeepak-2005.github.io/static/js/main.25a1c763.chunk.js.map",
+    "runtime-main.js": "/meherdeepak-2005.github.io/static/js/runtime-main.0e064442.js",
+    "runtime-main.js.map": "/meherdeepak-2005.github.io/static/js/runtime-main.0e064442.js.map",
+    "static/js/2.09880c29.chunk.js": "/meherdeepak-2005.github.io/static/js/2.09880c29.chunk.js",
+    "static/js/2.09880c29.chunk.js.map": "/meherdeepak-2005.github.io/static/js/2.09880c29.chunk.js.map",
+    "static/js/3.3fead691.chunk.js": "/meherdeepak-2005.github.io/static/js/3.3fead691.chunk.js",
+    "static/js/3.3fead691.chunk.js.map": "/meherdeepak-2005.github.io/static/js/3.3fead691.chunk.js.map",
+    "index.html": "/meherdeepak-2005.github.io/index.html",
+    "static/css/main.7ff01659.chunk.css.map": "/meherdeepak-2005.github.io/static/css/main.7ff01659.chunk.css.map",
+    "static/js/2.09880c29.chunk.js.LICENSE.txt": "/meherdeepak-2005.github.io/static/js/2.09880c29.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/meherdeepak-2005.github.io/static/media/landing-page-girl.9d276ac0.png",
+    "static/media/logo.ae988166.png": "/meherdeepak-2005.github.io/static/media/logo.ae988166.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e064442.js",
+    "static/js/2.09880c29.chunk.js",
+    "static/css/main.7ff01659.chunk.css",
+    "static/js/main.25a1c763.chunk.js"
+  ]
+}
